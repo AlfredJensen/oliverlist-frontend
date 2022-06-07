@@ -11,6 +11,7 @@
 
 
 <script>
+
 import MultiStep from "@/components/SignUp/MultiStep.vue";
 import SideBar from "@/components/SignUp/SideBar.vue";
 
