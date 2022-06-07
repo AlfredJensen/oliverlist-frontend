@@ -47,7 +47,7 @@ import SelectedContact from "@/components/Businesses/SelectedContact.vue";
 import SelectedCompany from "@/components/Businesses/SelectedCompany.vue";
 import MonthlyReport from "@/components/Reports/MonthlyReport.vue";
 import Usages from "../views/Usages.vue";
-import SignUp from "../views/SignUp.vue"
+import SignUp from "../views/SignUp.vue";
 
 import jQuery from 'jquery'
 let $ = jQuery;
