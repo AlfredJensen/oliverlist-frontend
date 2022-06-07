@@ -1,6 +1,6 @@
 <template>
     <div class="row ml-0 mr-0">
-            <div class="col-md-5">
+            <div class="col-md-5 pl-0 pr-0">
                 <SideBar></SideBar>
             </div>
             <div class="col-md-7">

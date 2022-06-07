@@ -1,21 +1,39 @@
 <template>
   <div class="sidebar">
-    <img
-        src="@/assets/images/logomenu.png"
-        class="logo-img"
-     />
-        <div>
-            <img class="item-img" src="@/assets/images/option.png"/>
-            <p class="item">Your first B2B appointment order is just a few clicks away</p>
+    <div class="side-header"> 
+        <img
+            src="@/assets/images/logomenu.png"
+            class="logo-img"
+        />
+    </div>
+    <div class="side-content">
+        <div class="side-left">
         </div>
-        <div>
-            <img class="item-img" src="@/assets/images/option.png"/>
-            <p class="item">Get appointment in your calendar in 15 days</p>
+        <div class="side-right">
+            <div>
+                <img class="item-img" src="@/assets/images/option.png"/>
+                <p class="item">Your first B2B appointment order is just a few clicks away</p>
+            </div>
+            <div>
+                <img class="item-img" src="@/assets/images/option.png"/>
+                <p class="item">Get appointment in your calendar in 15 days</p>
+            </div>
+            <div>
+                <img class="item-img" src="@/assets/images/option.png"/>
+                <p class="item">You only pay when the first appointments will be generated</p>
+            </div>
+        </div>        
+    </div>
+    <div class="side-footer">
+        <div class="side-left">
+
         </div>
-        <div>
-            <img class="item-img" src="@/assets/images/option.png"/>
-            <p class="item">You only pay when the first appointments will be generated</p>
-        </div>    
+        <div class="side-right">
+            <p class="item-end">OliverList&nbsp;&nbsp;&nbsp;&nbsp; Privacy and T&Cs</p>
+        </div>
+        
+    </div>
+    
   </div>
 </template>
 <script>
@@ -44,39 +62,59 @@ export default {
 };
 </script>
 <style>
-    .sidebar { 
+    .sidebar{
+        display: flex;
+        flex-direction: column;
         background-color: #1F203F;
-        width: 100%;
-        min-height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
         height: 100%;
-        z-index: 999;
-        text-align: center;
+        padding: 3em 0 3em 0;
     }
-    .sidebar > div {
-        text-align: left;
-        margin-bottom: 15px;
-        padding-left: 50px;;
+    .side-header {
+        display: flex;
+        flex: 2;   
+        justify-content: center;
+        align-items: center;
     }
-
-    .logo-img {
-        margin-top: 150px;
-        margin-bottom: 100px;
+    .side-content {
+        flex: 1;
+        display: flex;
     }
-
+    .side-content > div > div{
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    .side-left {
+        flex: 2;
+    }
+    .side-right {
+        display: flex;
+        flex: 11;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .side-footer {
+        display: flex;
+        flex: 2;
+    }
+    .item {
+        color: #ffffff;
+    }
     .item-img {
         width: 33px;
-        height: 33px;
     }
-
     .item {
-        padding-left: 20px;
         display: inline;
         color: #ffffff;
         font-weight: 400;
         font-size: 20px;
+        margin-left: 10px;
+    }
+    .item-end {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 20px;
+        flex: flex
     }
 </style>
   
