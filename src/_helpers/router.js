@@ -47,6 +47,7 @@ import SelectedContact from "@/components/Businesses/SelectedContact.vue";
 import SelectedCompany from "@/components/Businesses/SelectedCompany.vue";
 import MonthlyReport from "@/components/Reports/MonthlyReport.vue";
 import Usages from "../views/Usages.vue";
+import Signup from "../views/Signup.vue"
 
 
 import jQuery from 'jquery'
@@ -63,6 +64,11 @@ export const router = new Router({
       path: "/login",
       name: "login",
       component: Login,
+    },
+    {
+      path: "/signup",
+      name: "signup",
+      component: Signup
     },
     {
       path: "/lostpassword",
@@ -574,7 +580,7 @@ router.beforeEach((to, from, next) => {
   // window.location.href = "https://oliverlist.com/in-maintenance";
 
   // redirect to login page if not logged in and trying to access a restricted page
-  const publicPages = ["/login", "/createaccount", "/lostpassword", "/proposal"];
+  const publicPages = ["/login", "/createaccount", "/lostpassword", "/proposal", "/signup"];
   const authRequired = !publicPages.includes(to.path);
   //const loggedIn = localStorage.getItem("user");
 
@@ -625,7 +631,7 @@ router.beforeEach((to, from, next) => {
 
     if (loggedIn && loggedIn.role_id != 1) {
       if (loggedIn.verificationcode != null || loggedIn.client_id == null) {
-        return next("/createaccount");
+        return next("/signup");
       }
     }
 

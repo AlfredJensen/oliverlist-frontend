@@ -7,7 +7,7 @@
       <router-view v-if="$route.meta.keepAlive"></router-view>
     </keep-alive>
     <router-view v-if="!$route.meta.keepAlive"></router-view>
-		
+	
 	 <Footer />
   </div>
 </template>
@@ -17,7 +17,6 @@
 	import HeaderTopBar from '@/components/HeaderTopBar.vue';
 	import ToastNotifications from "@/components/ToastNotifications.vue";
 	import Footer from "@/components/Footer.vue";
-
 
 	export default {
 		name: 'home',

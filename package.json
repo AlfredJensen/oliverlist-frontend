@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --mode local",
+    "serve": "vue-cli-service serve --port 9000 --mode local",
     "serve-dev": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build",
     "sass": "node-sass src/assets/css/styles.scss src/assets/css/styles.css --output-style compressed",
@@ -26,7 +26,7 @@
     "@ckeditor/ckeditor5-vue": "^1.0.3",
     "@riophae/vue-treeselect": "^0.4.0",
     "add": "^2.0.6",
-    "axios": "0.21.1",
+    "axios": "^0.27.2",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
     "core-js": "^2.6.12",
@@ -34,8 +34,7 @@
     "jquery": "^3.5.1",
     "jspdf": "^1.5.3",
     "jspdf-autotable": "^3.5.13",
-    "moment": "^2.29.1",
-    "node-sass": "^4.14.1",
+    "moment": "^2.29.3",
     "popper.js": "^1.16.1",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^0.5.1",
@@ -64,13 +63,14 @@
     "vue-sweetalert2": "^2.1.5",
     "vue2-google-maps": "^0.10.7",
     "vuex": "^3.6.0",
-    "xlsx": "^0.16.9"
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.1",
     "@vue/cli-plugin-pwa": "^4.5.10",
     "@vue/cli-service": "^3.12.1",
     "env-cmd": "^10.1.0",
+    "node-sass": "^4.14.1",
     "vue-template-compiler": "^2.6.12"
   }
 }

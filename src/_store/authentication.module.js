@@ -6,10 +6,11 @@ import { store } from '.';
 
 
 let user = null;
+
 try {
   user = window.localStorage.getItem("xkhx$$") != null ? JSON.parse(decodeURIComponent(escape(atob(window.localStorage.getItem("xkhx$$"))))) : null;
-//window.localStorage.removeItem("xkhx$$");
-}catch (error) {
+  //window.localStorage.removeItem("xkhx$$");
+} catch (error) {
   user = null;
 }
 if (user && user.user && user.user.lang_code) {
@@ -48,19 +49,18 @@ export const authentication = {
         usersService.login(username, password)
           .then(
             user => {
+              console.log("login success!!!");
               commit('loginSuccess', user);
               dispatch('getToastNotificationData');
-
               i18n.locale = user.lang_code;
-
               // TODO delete this
               localStorage.setItem('priorityCategoryFilter', JSON.stringify({}));
               localStorage.setItem('priorityProductFilter', JSON.stringify({}));
 
               resolve('ok');
-
             },
             error => {
+              console.log("login error!!!!!");
               commit('loginFailure', error);
               dispatch('alert/newError', { message: error, section: 'login' }, { root: true });
               reject('error')
@@ -79,12 +79,13 @@ export const authentication = {
               resolve('ok');
             },
             error => {
-              commit('loginFailure');
-              dispatch('alert/newError', { message: error, section: 'login' }, { root: true });
-              localStorage.setItem('afterLoginGoTo', router.currentRoute.fullPath);
-              router.push('/login');
-              // router.push({ name: 'login', query: { redirect: router.currentRoute.fullPath } });
-              reject('error')
+              resolve('ok');
+              // commit('loginFailure');
+              // dispatch('alert/newError', { message: error, section: 'login' }, { root: true });
+              // localStorage.setItem('afterLoginGoTo', router.currentRoute.fullPath);
+              // router.push('/login');
+              // // router.push({ name: 'login', query: { redirect: router.currentRoute.fullPath } });
+              // reject('error')
             }
           );
       });
@@ -244,6 +245,7 @@ export const authentication = {
     },
 
   },
+
   mutations: {
     loginRequest(state, user) {
       state.status = { loggingIn: true };

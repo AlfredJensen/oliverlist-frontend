@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        
+      </div>
       <div class="col-md-6">
         <div class="login-block well shadow py-5 bg-white">
           <img
@@ -67,7 +69,7 @@
                 </button>
               </div>
               <div class="col-sx-12 md-12 col-lg-8 mymd-4">
-                <router-link to="/createaccount">
+                <router-link to="/signup">
                   <a class="nav-link pxmd-0" href>
                     <span href="#">{{
                       $t("lang.label.donthaveanaccount")
@@ -112,7 +114,6 @@ export default {
     },
   },
   created() {
-
     // reset login status
     this.$store.dispatch("authentication/logout");
     this.$store.dispatch("opportunities/resetState");

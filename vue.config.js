@@ -16,7 +16,9 @@ module.exports = {
         }
     },
     devServer: {
-        host: 'oliver-front.localhost.com'
+        // host: 'oliver-front.localhost.com'
+        host: 'localhost',
+        // https:true
     },
 
     /*

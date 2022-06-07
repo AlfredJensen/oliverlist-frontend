@@ -4,14 +4,14 @@
       <div class="container">
         <div class="row h-100">
           <div class="col-sm-12 col-lg-8 h-100 mx-auto mt2em bg-white">
-            <div class="p-4 shadow">
-              <img
+            <div class="p-4 info-box" >
+              <!-- <img
                 src="@/assets/images/5-1-300x233.png"
                 class="rounded mx-auto d-block"
                 width="150px"
-              />
+              /> -->
               <div
-                class="wrapper-form"
+                class="wrapper-form pad-form"
                 v-if="emailSent() && showVerificationCode"
               >
                 <div class="my-4">
@@ -61,95 +61,120 @@
                   </router-link>
                 </div>
               </div>
-              <div class="wrapper-form" v-if="!emailSent()">
-                <div v-if="hash != null">
+              <div class="wrapper-form pad-form" v-if="!emailSent()">
+                <!-- <div v-if="hash != null">
                   <h2>{{ $t("lang.label.createteamaccount") }}</h2>
                 </div>
                 <div class="my-4 text-center" v-else>
-                 
                   <div>
                     {{ $t("lang.label.fullaccessnocreditcardrequired") }}
                   </div>
+                </div> -->
+                <div class="my-4 text-left">
+                    <h2>{{ $t("lang.label.signup") }}</h2>
                 </div>
 
                 <form class="mt-4" v-on:submit.prevent="handleSubmit">
                   <div class="form-row my-4">
+                    <div class="form-group col-md-12">
+                      <small class="form-text form-name">
+                        {{ $t("lang.label.email") }}
+                      </small>
+                      <input
+                        id="email"
+                        type="email"
+                        class="form-control"
+                        v-model="username"
+                        required="true"
+                      />
+                      <small id="emailHelp" class="form-text form-line">{{
+                        $t(
+                          "lang.label.businessemailsonlyyouwillhavetoconfirmthatthisemailisyours"
+                        )
+                      }}</small>
+                    </div>
+                    
+                    <div class="form-group col-md-12">
+                      <small class="form-text form-name">
+                        {{ $t("lang.label.phone") }}
+                      </small>
+                      <input
+                        id="phone"
+                        type="text"
+                        class="form-control"
+                        v-model="phone"
+                        required="true"
+                      />
+                    </div>
+                    <div class="form-group col-md-12">
+                      <small class="form-text form-name">
+                        {{ $t("lang.label.language") }}
+                      </small>
+                      <input
+                        id="language"
+                        type="text"
+                        class="form-control"
+                        v-model="language"
+                        required="true"
+                      />
+                    </div>
+                    <div class="form-group col-md-12">
+                      <small class="form-text form-name">
+                        {{ $t("lang.label.companyname") }}
+                      </small>
+                      <input
+                        id="companyname"
+                        type="text"
+                        class="form-control"
+                        v-model="companyname"
+                        required="true"
+                      />
+                    </div>
                     <div class="col-sm-12 col-md-6 mbsm-2">
+                      <small class="form-text form-name">
+                        {{ $t("lang.label.firstname") }}
+                      </small>
                       <input
                         id="firstname"
                         type="text"
                         class="form-control"
-                        v-bind:placeholder="$t('lang.label.firstname')"
                         v-model="firstname"
                         required="true"
                       />
                     </div>
                     <div class="col-sm-12 col-md-6">
+                      <small class="form-text form-name">
+                        {{ $t("lang.label.lastname") }}
+                      </small>
                       <input
                         id="lastname"
                         type="text"
                         class="form-control"
-                        v-bind:placeholder="$t('lang.label.lastname')"
                         v-model="lastname"
                         required="true"
                       />
                     </div>
                   </div>
-                  <div class="form-row my-4">
-                    <div class="col-sm-12 col-md-6 mbsm-2">
-                      <input
-                        id="company"
-                        type="text"
-                        class="form-control"
-                        v-bind:placeholder="$t('lang.label.company')"
-                        v-model="company"
-                        required="true"
-                      />
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                      <input
-                        id="phone"
-                        type="text"
-                        class="form-control"
-                        v-bind:placeholder="$t('lang.label.phone')"
-                        v-model="phone"
-                        required="true"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-row my-4">
-                    <div class="form-group col-md-12">
-                      <input
-                        id="email"
-                        type="email"
-                        class="form-control"
-                        v-bind:placeholder="$t('lang.label.email')"
-                        v-model="username"
-                        required="true"
-                      />
-                      <small id="emailHelp" class="form-text dark-gray">{{
-                        $t(
-                          "lang.label.youwillhavetoconfirmthatthisemailisyours"
-                        )
-                      }}</small>
-                    </div>
+                  <div class="form-row my-4"> 
                     <div class="form-group col-md-6">
+                      <small class="form-text form-name">{{
+                        $t("lang.label.password")
+                      }}</small>
                       <input
                         type="password"
                         class="form-control"
                         id="password"
                         v-model="password"
-                        v-bind:placeholder="$t('lang.label.password')"
                         pattern="^(?=(.*[a-z]){1,})(?=(.*[A-Z]){1,})(?=(.*[0-9]){1,}).{6,16}$"
                         required
                         :title="$t('lang.validation.password')"
-                        required="true"
                       />
-                      <small class="form-text dark-gray">{{
-                        $t("lang.validation.password")
-                      }}</small>
+                      
                     </div>
                     <div class="form-group col-md-6">
+                      <small class="form-text form-name">
+                        {{$t("lang.label.confirmpassword")}}
+                      </small>
                       <input
                         type="password"
                         pattern=".{8,}"
@@ -158,19 +183,16 @@
                         v-model="confirmpass"
                         class="form-control"
                         id="confirmpass"
-                        v-bind:placeholder="$t('lang.label.confirmpassword')"
-                        required="true"
                       />
                     </div>
-
-                    <div class="form-group col-md-6">
+                    <!-- <div class="form-group col-md-6">
                       <input
                         type="text"
                         v-model="codepromo"
                         class="form-control"
                         v-bind:placeholder="$t('lang.label.codepromo')"
                       />
-                    </div>
+                    </div> -->
 
 
 
@@ -189,14 +211,28 @@
                       <li v-for="error in errors">{{ error }}</li>
                     </div>
                   </div>
-                  <div class="d-flex justify-content-end">
+                  <div class="d-flex justify-content-center">
                     <button
                       class="btn btn-primary themed-button btn-sm text-right"
                     >
-                      {{ $t("lang.button.freetrial") }}
+                      {{ $t("lang.button.createyouraccount") }}
                     </button>
                   </div>
                 </form>
+                <!-- <div class="w-100 d-flex justify-content-end my-4">
+                  <router-link to="/login">
+                    <a class="btn btn-sm btn-outline-dark mr-4" href>
+                      <span>{{ $t("lang.button.login") }}</span>
+                    </a>
+                  </router-link>
+                </div> -->
+                <div class="text-center mt-2 ">
+                  {{ $t("lang.label.youalreadyhaveanaccount") }}
+                  <a
+                    href="https://oliverlist.com/terms-of-services/"
+                    target="_blank"
+                    >{{ $t("lang.label.loginhere") }} </a>
+                </div>
               </div>
               <div class="wrapper-form" v-if="showUserParameters">
                 <div class="my-4">
@@ -321,7 +357,7 @@
                 </form>
               </div>
             </div>
-            <div class="text-center mt-2">
+            <!-- <div class="text-center mt-2">
               {{ $t("lang.label.byregistering") }}
               <a
                 href="https://oliverlist.com/terms-of-services/"
@@ -333,14 +369,8 @@
                 target="_blank"
                 >{{ $t("lang.label.privacypolicy") }}.</a
               >
-            </div>
-            <div class="w-100 d-flex justify-content-end my-4">
-              <router-link to="/login">
-                <a class="btn btn-sm btn-outline-dark mr-4" href>
-                  <span>{{ $t("lang.button.login") }}</span>
-                </a>
-              </router-link>
-            </div>
+            </div> -->
+            
           </div>
         </div>
       </div>
@@ -643,7 +673,7 @@ export default {
   },
 };
 </script>
-    <style>
+<style>
 .mt2em {
   margin-top: 10%;
 }
@@ -689,5 +719,31 @@ div.vue-treeselect__option-arrow-container {
 div.vue-treeselect__option-arrow-container::before {
   content: "\f196";
   color: #5155ea;
+}
+
+.form-name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.form-line {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #929292;
+}
+
+.info-box {
+  background: #FFFFFF;
+  border: 1px solid #C5C5C5;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+.pad-form {
+  padding-left: 35px;
+  padding-right: 35px; 
 }
 </style>

@@ -38,6 +38,24 @@ export const usersService = {
 
 const apiUrl = process.env.VUE_APP_ROOT_API;
 
+function handleResponse(response) {
+    return response.text().then(text => {
+        const data = text && JSON.parse(text);
+        console.log("response ==", data);
+        console.log("Response status ==", response.status);  
+        if (!response.ok) {
+            if (response.status === 401) {
+                logout();
+            }
+
+            const error = data || response.statusText;
+            return Promise.reject(error);
+        }
+
+        return data;
+    });
+}
+
 function login(username, password) {
     const requestOptions = {
         method: 'POST',
@@ -46,32 +64,31 @@ function login(username, password) {
         credentials: 'include', // include, same-origin, omit
     };
 
-    return fetch(`${apiUrl}/users/login`, requestOptions)
-        .then(handleResponse)
+    return fetch(`${apiUrl}/users/login`, requestOptions).then(handleResponse)
         
         .then(user => {
-            // login successful if there's a jwt token in the response
-            /*if (user.token) {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                //localStorage.setItem('user', JSON.stringify(user));
-                this.hasPaymentDefault().then(response => { 
-                    if(response.trialPeriodEnded.result == 1 && 
-                        response.hasDefaultPaymentMethod.length == 0){
-                        localStorage.setItem('trialPeriodEnded', true); 
-                    } else{ 
-                        localStorage.setItem('trialPeriodEnded', false);
-                    }
-                    localStorage.setItem('subscriptionActive', response.subscriptionActive);
-                })
+        //     // login successful if there's a jwt token in the response
+        //     /*if (user.token) {
+        //         // store user details and jwt token in local storage to keep user logged in between page refreshes
+        //         //localStorage.setItem('user', JSON.stringify(user));
+        //         this.hasPaymentDefault().then(response => { 
+        //             if(response.trialPeriodEnded.result == 1 && 
+        //                 response.hasDefaultPaymentMethod.length == 0){
+        //                 localStorage.setItem('trialPeriodEnded', true); 
+        //             } else{ 
+        //                 localStorage.setItem('trialPeriodEnded', false);
+        //             }
+        //             localStorage.setItem('subscriptionActive', response.subscriptionActive);
+        //         })
                 
-                // Initialize variables for user filter of priority product and category
-                localStorage.setItem('priorityCategoryFilter', JSON.stringify({}));
-                localStorage.setItem('priorityProductFilter', JSON.stringify({}));
-            }*/
+        //         // Initialize variables for user filter of priority product and category
+        //         localStorage.setItem('priorityCategoryFilter', JSON.stringify({}));
+        //         localStorage.setItem('priorityProductFilter', JSON.stringify({}));
+        //     }*/
             return user;
         });
 }
-
+  
 function refreshToken() {
     const requestOptions = {
         method: 'POST',
@@ -416,20 +433,4 @@ function resendVerificationCode(username) {
     };
 
     return fetch(`${apiUrl}/users/resend-verificationcode`, requestOptions).then(handleResponse);
-}
-
-function handleResponse(response) {
-    return response.text().then(text => {
-        const data = text && JSON.parse(text);
-        if (!response.ok) {
-            if (response.status === 401) {
-                logout();
-            }
-
-            const error = data || response.statusText;
-            return Promise.reject(error);
-        }
-
-        return data;
-    });
 }

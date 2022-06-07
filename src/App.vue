@@ -3,12 +3,12 @@
     <div  class="bg-white">
 	<router-view :key="this.$store.state.sidebar.navigationClicked"></router-view>
     </div>
-	<div class="fadeinoliver w-100">
+	<!-- <div class="fadeinoliver w-100">
 		<img id="f1" src="@/assets/images/oliver-c.png" class="mx-auto">
 	    <img id="f2" src="@/assets/images/oliver-d.png" class="mx-auto" >
 	    <img id="f3" src="@/assets/images/oliver-e.png" class="mx-auto" >
 	    <small class="text-primary">{{$t('lang.search.loading')}}...</small>
-	</div>
+	</div> -->
 	</div>
 </template>
 
@@ -57,10 +57,13 @@
 }
 
 #f1 {
+
 }
+
 #f2 {
     -webkit-animation-delay: -2s;
 }
+
 #f3 {
     -webkit-animation-delay: -4s;
 }
