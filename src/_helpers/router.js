@@ -47,8 +47,7 @@ import SelectedContact from "@/components/Businesses/SelectedContact.vue";
 import SelectedCompany from "@/components/Businesses/SelectedCompany.vue";
 import MonthlyReport from "@/components/Reports/MonthlyReport.vue";
 import Usages from "../views/Usages.vue";
-import Signup from "../views/Signup.vue"
-
+import SignUp from "../views/SignUp.vue"
 
 import jQuery from 'jquery'
 let $ = jQuery;
@@ -68,7 +67,7 @@ export const router = new Router({
     {
       path: "/signup",
       name: "signup",
-      component: Signup
+      component: SignUp
     },
     {
       path: "/lostpassword",

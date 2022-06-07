@@ -1,35 +1,36 @@
 <template>
-    <div class="row">
-        <div class="col-md-4">
-            <Sidebar></Sidebar>
+    <div class="row ml-0 mr-0">
+            <div class="col-md-5">
+                <SideBar></SideBar>
+            </div>
+            <div class="col-md-7">
+                <MultiStep  :user="user" />
+            </div>
         </div>
-        <div class="col-md-8">
-            <CreateAccount></CreateAccount>
-        </div>
-    </div>
 </template>
 
-<script>
-    import Sidebar from "@/components/Signup/Sidebar.vue";
-    import MultiStep from "@/components/Signup/MultiStep.vue";
-    import LoadingSpinnerBar from "@/components/LoadingSpinnerBar.vue";
-    import CreateAccount from "../views/CreateAccount.vue";
-    import { mapState } from "vuex";
 
-    export default {
-        data() {
-            return {
-                loading: false
-            };
-        },
-        components: {
-            LoadingSpinnerBar,
-            Sidebar,
-            MultiStep,
-            CreateAccount
-        },
-        computed: {
-           
-        }
-    };
+<script>
+import MultiStep from "@/components/SignUp/MultiStep.vue";
+import SideBar from "@/components/SignUp/SideBar.vue";
+export default {
+  data(){
+    return{
+      option:'',
+    }
+  },
+  computed: {
+    user() {
+      return this.$store.state.authentication.user;
+    }
+  },
+  components: {
+    MultiStep,
+    SideBar
+  },
+  methods: {
+
+  }
+
+}
 </script>

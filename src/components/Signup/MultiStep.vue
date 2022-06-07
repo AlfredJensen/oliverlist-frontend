@@ -3,7 +3,7 @@
   <div class="ml-2 mr-2">
       <section :class="animation">
         <div class="input-fields">
-
+          <SignUpFirst :user="user" @goToStep="goToStep($event)"  v-if="activeStep == 0" :step="activeStep+1"  :total="formSteps.length"/>
         </div>
       </section>
   </div>
@@ -11,17 +11,13 @@
 </template>
 
 <script>
+import SignUpFirst from "@/components/SignUp/Steps/SignUpFirst.vue";
 
-import Step1 from "@/components/Signup/Steps/Step1.vue";
-import Step2 from "@/components/Signup/Steps/Step2.vue";
-import Step3 from "@/components/Signup/Steps/Step3.vue";
 
 export default {
 
   components: {
-    Step1,
-    Step2,
-    Step3
+    SignUpFirst
   },
 
   props: {
@@ -29,12 +25,32 @@ export default {
   },
 
   data () {
-      return {
-
-      };
+      var active = 0
+      if(this.user && this.user.verificationcode != null){
+        active = 0
+      }else{
+        if(this.user && this.user.client_id == null){
+          active = 1
+        }else{
+           if(this.user && this.user.client_id != null){
+            active = 1
+          }
+        }
+      }
+    	return{
+  	    activeStep: active,
+  	    animation: 'animate-in',
+  	    formSteps: []
+  	}
   },
   methods: {
-    
+    goToStep(active){
+      this.animation = 'animate-out';
+      setTimeout(() => {
+        this.animation = 'animate-in';
+        this.activeStep = active;
+      }, 60);
+    },
   }
-}
+  }
 </script>

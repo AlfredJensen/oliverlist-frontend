@@ -1,7 +1,8 @@
 <template>
-    <div>
-    <MultiStep  :user="user" />
-    </div>
+      
+      <div>
+      <MultiStep  :user="user" />
+      </div>
 </template>
 
 
