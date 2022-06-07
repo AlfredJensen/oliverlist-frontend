@@ -44,7 +44,7 @@ export default {
 };
 </script>
 <style>
-    .sidebar {
+    .sidebar { 
         background-color: #1F203F;
         width: 100%;
         min-height: 100vh;
