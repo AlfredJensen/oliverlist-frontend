@@ -1,0 +1,36 @@
+.bodyCampagne02{
+    background-color: $color01;
+}
+
+.cardTimeline{
+    margin-top: 5em;
+}
+
+
+.Tline {
+    border-left: 3px solid $color06;
+    padding-left: 1em;
+    position: relative;
+    .icon-mail_outline{
+       position: absolute;
+       left: -14px;
+       background: $color06;
+       padding: .3em;
+       border-radius: 50%;
+       color: #fff;
+    }
+    .contentTL {
+        position: relative;
+        p{
+            font-size: .7em;
+        }
+    }
+    .jours{
+        position: absolute;
+        left: -75px;
+        top:50%;
+        transform: translateY(-50%);
+        font-size: .8em;
+        color: $color06;
+    }
+}

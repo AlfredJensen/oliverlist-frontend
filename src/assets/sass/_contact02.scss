@@ -1,0 +1,22 @@
+.bodyContact02{
+    background: #fff;
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+    .itemsOliver .card::after {
+        display: none;
+    }
+    .btn-outline-danger,
+    .btn-outline-success {
+        background-color: #fff;
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+    .btn-outline-danger:hover{
+          background-color: #00b388;
+    }
+    .btn-outline-success:hover{
+        background-color: #28a745;
+    }
+}

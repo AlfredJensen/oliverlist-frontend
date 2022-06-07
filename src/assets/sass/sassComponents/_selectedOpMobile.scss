@@ -1,0 +1,61 @@
+@media(max-width:767px){
+    #app{
+        overflow-x: hidden;
+    }
+    .selectedOpMobile{
+        .contact-info{
+            display:none;
+        }
+        section.info{
+            .row.animated.fadeIn.fast.mx-2 > .col-md-4,
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .card.mt-5.comments-activity-card,
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .text-center.mt-1.pr-2
+            // .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .wTimeLine 
+            {
+                display: none;
+            }
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .wTimeLine .activityLine.border-left.pb-4 .card.ml-4.p-2{
+                margin-left: 0px !important;
+            }
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .wTimeLine .activityLine.border-left.pb-4{
+                padding-left:0px !important;
+                border-left:none !important;
+            }
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .wTimeLine{
+                .activityLine .icon-phone-call,
+                .activityLine .icon-email, 
+                .activityLine .icon-comment,
+                .activityLine .icon-clock, 
+                .activityLine > [class^=icon-],
+                .activityLine > [class*=" icon-"]{
+                    display: none;
+                }
+            }
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .wTimeLine ul > div.card.ml-4.p-2,
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .wTimeLine ul li.activityLine.pb-4:nth-child(2){
+                display: none;    
+            }
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .wTimeLine .activityLine{
+                #replyEm{
+                    .card.notEffect.replyEmail.mt-3.p-3 {
+                        padding: 0px!important;
+                        border:none;
+                    }
+                    .rowborder .col-12 .d-flex:first-child{
+                       display: initial !important;
+                    }
+                    .rowborder .col-12 .d-flex:first-child .mr-auto.align-self-center .btn.btn-secondary,
+                    .rowborder .col-12 .d-flex:first-child .btn-group.my-2,
+                    .rowborder .col-12 .d-flex:first-child .btn-group.my-2 .btn-group{
+                        width: 100% !important;
+                    }
+                }
+            }
+            .row.animated.fadeIn.fast.mx-2 > .col-md-8 .mt-3 .wTimeLine ul > li.activityLine.border-left.dashed.pb-2{
+                display: none;
+            }
+
+        }
+
+    }
+}

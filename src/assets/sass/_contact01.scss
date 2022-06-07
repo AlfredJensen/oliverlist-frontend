@@ -1,0 +1,27 @@
+.bodyContact {
+    background-color: $color01;
+}
+
+.mainContact {
+    background-color: $color01;
+    padding: 1em;
+
+    @media(min-width: 992px) {
+        padding: 2em;
+    }
+}
+
+.listItems {
+    .wrapperList {
+        background-color: #fff;
+        padding: 1em;
+    }
+}
+.mainContact{
+    .search{
+        background-color: #fff;
+        input{
+             background-color: #fff;
+        }
+    }
+}

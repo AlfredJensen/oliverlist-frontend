@@ -1,0 +1,19 @@
+.transactions{
+    .card{
+        .title{
+            border-bottom: 1px solid $color05;
+        }
+        .btn-theme-bg-transparent{
+            color:$themedColor !important;
+        }
+    }
+    .table-transactions{
+        min-height: initial;
+        thead,tr,th,tbody,td{
+            border:none;
+        }
+        .table-hover tbody tr:hover{
+            background-color: transparent;
+        }
+    }
+}

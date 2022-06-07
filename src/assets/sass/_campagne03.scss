@@ -1,0 +1,69 @@
+.emails{
+    .list-group-item{
+        padding: .3rem .25rem;
+        border:none;
+        padding-top: 1em;
+    }
+    .email{
+        line-height: .9;
+    }
+    .icon-mail_outline{
+          background: $color06;
+          padding: .3em;
+          border-radius: 50%;
+          color: #fff;
+    }
+}
+
+.btnFloat{
+    background: $color06;
+    color:#fff;
+   
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+/*
+.btn-secondary {
+    color: $color06;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+
+    &:active,&.show, &:hover{
+        color: $color06;
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
+ .btn-secondary:not(:disabled):not(.disabled).active,
+ .btn-secondary:not(:disabled):not(.disabled):active,
+ .show>.btn-secondary.dropdown-toggle {
+      color: $color06;
+      background-color: transparent;
+      border-color: transparent;
+ }*/
+ .wrImg{
+    width: 70px;
+    height: auto;
+     img{
+         width: 100%;
+     }
+ }
+.contentTitle{
+    width: 100%;
+    border-bottom: 1px solid $color01;
+}
+
+.select{
+    color: $color06;
+    border: none;
+    outline: none;
+    &:focus{
+        color: $color06;
+        border:none;
+        box-shadow: none;
+    }
+}

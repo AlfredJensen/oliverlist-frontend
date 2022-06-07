@@ -1,0 +1,116 @@
+.cardProgress,.cardChart{
+  min-height: 14em;
+  border-radius: .75rem;
+  @media (max-width: 1440px) {
+    min-height: 12em;
+  }
+  @media (max-width: 768px) {
+      max-width: 20em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+}
+.cardProgress {
+  background-color: #4e73df;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #4e73df), to(#224abe));
+  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-size: cover;
+  color:#fff;
+  .pNum{
+    font-size: 5em;
+     @media (max-width: 1440px) {
+      font-size: 4em;
+     }
+    
+  }
+  .progress{
+    background-color: rgba($color: #fff, $alpha: .5);
+    border-radius: .50rem;
+    height: 1.2rem;
+    max-width: 70%;
+  
+  }
+  .bg-info{
+    background-color: #fff !important;
+  }
+  .dateCard{
+    line-height: .9;
+    font-size: .7em;
+    & span:nth-child(2) {
+      font-size: 2em;
+      @media (max-width: 1440px) {
+        font-size: 1em;
+      }
+    }
+  }
+  .descriptionCard{
+    & span:nth-child(3),
+    & span:nth-child(4) {
+       line-height: 1.3;
+       font-size: .8em;
+    }
+  }
+  .icon-more_horiz{
+        color: #fff;
+        font-size: 1.5em;
+        padding: .3rem 1rem;
+  }
+  
+}
+.cardChart{
+  position: relative;
+  text-transform: uppercase;
+	background-position:bottom;
+	background-repeat:no-repeat;
+	background-size:cover;
+   .topNum {
+     width: 100%;
+     text-align: right;
+    .num{
+      font-size: 1.2em;
+    }
+    .description{
+      font-size: 0.9em;
+    }
+   }
+   .centerNum {
+      .num{
+        font-size: 2em;
+      }
+      .description{
+        line-height: .9;
+      }
+   }
+  .bottomNum {
+     text-align: right;
+     .num {
+       font-size: 1.3em;
+     }
+     .description {
+       line-height: .9;
+       font-size: 0.9em;
+     }
+   }
+  .badge {
+    margin-top:10px;
+    background-color: $color04;
+    color: #fff;
+    font-size: .9em;
+    line-height: 1.5;
+    .triang{
+       width: 0;
+       height: 0;
+       border-right: 7px solid transparent;
+       border-top: 5px solid transparent;
+       border-left: 7px solid transparent;
+       border-bottom: 12px solid #fff;
+    }
+   
+  }
+}
+.card:hover{
+  &.not-effect{
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}

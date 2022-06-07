@@ -1,0 +1,88 @@
+/**
+* CUSTOM STYLES
+*/
+.switch-center{
+    text-align: center;
+}
+.switch-center .field-wrap{
+    display: inline-block;
+}
+.campaign-steps {
+    max-height: 500px;
+    overflow-y: auto;
+}
+.campaign-steps li {
+    margin-left: 50px;
+    position: relative;
+}
+.campaign-steps li .step-wrapper {
+    position: absolute;
+    left: -50px;
+}
+.campaign-steps li .step {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+.overflowy-scroll{
+    max-height: 300px;
+    overflow-y: auto;
+}
+.hovertext3{
+    white-space: break-spaces;
+    max-width: 83px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table thead th {
+    white-space: nowrap;
+}
+.swal2-container.swal2-shown{
+    z-index: 20 !important;
+}
+
+.vue-image-crop-upload .vicp-wrap {
+    position: absolute;
+    background-color: #f9f9f9;
+  }
+  .vue-image-crop-upload {
+    z-index: 1000000;
+    position: relative;
+  }
+  .vue-image-crop-upload .vicp-wrap .vicp-close .vicp-icon4::after,
+  .vue-image-crop-upload .vicp-wrap .vicp-close .vicp-icon4::before {
+    background-color: #495057;
+  }
+  .vue-image-crop-upload .vicp-wrap .vicp-operate a{
+    width: 80px;
+  }
+  .content-bar {
+    width: 100%;
+    padding-top: 2px;
+  }
+  .progress {
+    height: 0.3rem;
+  }
+  .progress-bar {
+    background-color: #52be80;
+  }
+
+  .br-30 {
+    border-radius: 30%;
+  }
+  .checkbox-child{
+    margin-top: -14px;
+  }
+  .cc-form{
+    position: relative;
+  }
+  .cc-logo-wrapper{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }

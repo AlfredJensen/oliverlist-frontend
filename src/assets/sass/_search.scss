@@ -1,0 +1,39 @@
+.search{
+    background-color: $color01;
+    flex-flow: inherit;
+    @media (min-width:576px) {
+          display: block;
+    }
+  
+    input{
+        border: none;
+    }
+    border-radius: 5px #495057;
+    .btn-outline-success{
+        outline: none;
+        border:none;
+        color:#495057;
+        float: right;
+        &:active, &:hover,
+        &:not(:disabled):not(.disabled):active,
+        &:focus {
+             outline: none;
+             border:none;
+             color:#495057;
+             box-shadow: none;
+             background-color: transparent;
+        }
+    }
+    .form-control {
+        background-color: $color01;
+        min-width: 95%;
+        &:focus,
+        &:active,
+        &:visited,
+        &:hover {
+            outline: none;
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }    
+}

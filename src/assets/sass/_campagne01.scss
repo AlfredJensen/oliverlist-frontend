@@ -1,0 +1,17 @@
+.bodyCampagne{
+     background-color: $color01;
+}
+.mainCampagne{
+    background-color: $color01;
+    padding: 1em;
+    @media(min-width: 992px) {
+        padding: 2em;
+    }
+}
+.listCampagne{
+    .wrapperList{
+        background-color: #fff;
+        padding: 1em;
+    }
+}
+

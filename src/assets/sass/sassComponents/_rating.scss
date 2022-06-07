@@ -1,0 +1,39 @@
+
+.rating-component{
+$active-color: #FB7A24;
+.grade{
+      color:$active-color;
+      margin-right: 8px;
+      
+}
+.rating ul.list{display: flex; padding: 0px !important;}
+.rating {
+  display:flex;
+  align-items: center;
+  font-size: 12px;
+  color: #D3D3D3;
+}
+.list {
+  padding: 0;
+  list-style-type: none;
+  &:hover {
+    .star {
+      color: $active-color;
+    }
+  }
+}
+.star {
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    &~.star {
+      &:not(.active) {
+        color: inherit;
+      }
+    }
+  }
+}
+.active {
+  color: $active-color;
+}
+}

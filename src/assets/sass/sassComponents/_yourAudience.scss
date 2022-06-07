@@ -1,0 +1,56 @@
+.YourAudience{
+    div.dropdown-menu{
+        height: 200px;
+        overflow: scroll;
+        margin-top: -2px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      } 
+      div.dropdown-menu.empty{
+        height: 35px;
+      }
+      
+      .dropdown-item-select:focus, .dropdown-item-select:hover {
+          text-decoration: none;
+      }
+      .vue-treeselect__multi-value-item{
+        background-color: #443CEC;
+        color: #ffffff;
+        font-weight: 600;
+      }
+      .vue-treeselect svg{
+        fill: #ffffff;
+      }
+      span.multiselect__tag,.multiselect__tag-icon:after{
+        background: #443CEC;
+        color: #ffffff !important;
+      }
+      span.multiselect__tag{
+      border-radius: 2px;
+      }
+      
+      span.vue-treeselect__icon.vue-treeselect__value-remove{
+        border-left: 1px solid #443CEC;
+      }
+      .multiselect__tags span{
+        font-size: 12px ;
+        font-weight: 600;
+        padding-top:3px;
+        padding-bottom: 3px;
+      }
+      .multiselect__tag-icon:focus, .multiselect__tag-icon:hover,.multiselect__option--highlight,.multiselect__option--highlight:after,
+      span.ml-2.mb-1.badge.btn-success.themed-button:hover,.dropdown-item:focus{
+        background: #443CEC !important;
+      }
+       .dropdown-item:focus, .dropdown-item:hover{
+          background: #443CEC !important;
+          color: #ffffff !important;
+          border-color:  #443CEC !important;
+          outline: none;
+       }
+      span.ml-2.mb-1.badge.btn-success.themed-button,.ml-2.mb-1.badge.btn-danger{
+        border-radius: 2px;
+        padding:6px 8px;
+        font-weight: 600;
+      }
+}

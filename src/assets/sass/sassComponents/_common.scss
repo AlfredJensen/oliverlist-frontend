@@ -1,0 +1,27 @@
+.main{
+    &.expand-main{
+        margin-left: 60px;
+        transition: margin-left 0.5s;
+    }
+}
+.btn-success,.btn-success:hover  {
+    background-color: #52BE80;
+    border-color:#52BE80;
+    color: #FFFFFF;
+}
+.status-colors.positive{
+    color: #52BE80;
+}
+.badge-success{
+    background-color: #52BE80;
+}
+
+.five-step-company{
+    .tl-messages > li .tmlabel {
+        margin: 0 0 15px 40px;
+    }
+    .tl-messages .email-body{
+        line-height: 18px;
+        font-size: 16px;
+    }
+}

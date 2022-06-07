@@ -1,0 +1,23 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - apt-get update
+      - npm install --silent --no-progress
+  build:
+    commands:
+      - ls -lah
+      - rm -rf node_modules/@ckeditor/ckeditor5-build-classic/build
+      - cp -R custom_libs/build/ckeditor5-custom-build/build node_modules/@ckeditor/ckeditor5-build-classic/build
+      - npm run build-${EnvironmentType}
+  post_build:
+    commands:
+      - echo "Bucket Code ${S3Bucket}"
+      - echo Delete files on the Bucket
+      - aws s3 rm s3://"${S3Bucket}" --recursive
+      - echo Load new files for the last build of Vue APP
+      - aws s3 cp dist/ s3://"${S3Bucket}" --recursive
+      - echo Clean cache for cloudFront distribution
+      - aws cloudfront create-invalidation --distribution-id "${CloudfrontDistributionID}" --paths "/*"

@@ -1,0 +1,33 @@
+.alertErrorComponent{
+    .anim{
+        border-radius: 50%;
+        box-shadow: 0 0 0 rgba(114, 28, 36,0.4);
+        animation: circleanim 2s infinite;
+    }
+    @-webkit-keyframes circleanim {
+      0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(114, 28, 36,0.4);
+      }
+      70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(114, 28, 36,0);
+      }
+      100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(114, 28, 36,0);
+      }
+    }
+    @keyframes circleanim {
+      0% {
+        -moz-box-shadow: 0 0 0 0 rgba(114, 28, 36,0.4);
+        box-shadow: 0 0 0 0 rgba(114, 28, 36,0.4);
+      }
+      70% {
+          -moz-box-shadow: 0 0 0 10px rgba(114, 28, 36,0);
+          box-shadow: 0 0 0 10px rgba(114, 28, 36,0);
+      }
+      100% {
+          -moz-box-shadow: 0 0 0 0 rgba(114, 28, 36,0);
+          box-shadow: 0 0 0 0 rgba(114, 28, 36,0);
+      }
+    }
+    
+}

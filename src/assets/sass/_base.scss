@@ -1,0 +1,28 @@
+/*body{
+    background-color: $color01;
+}*/
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.3s;
+}
+p{
+    margin:0;
+    padding: 0;
+}
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+i,
+span {
+    display: inline-block;
+}
+footer{
+    min-height: 200px;
+}

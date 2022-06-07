@@ -1,0 +1,72 @@
+.customMail{
+      background: $color06;
+      color:#fff;
+      border-radius: 50%;
+      padding: .3em;
+    
+}
+.btnIcon{
+      background-color: #fff;
+      border-color: $color06;
+      color: $color06;
+      position: relative;
+      text-align: right;
+      padding-left: 1.5em;
+      .icon-plus{
+            position: absolute;
+            left: -13px;
+            top: 3px;
+            background-color: $color06;
+            color:#fff;
+            padding: .4rem;
+            border-radius: 50%;
+      }
+      &:active,
+      &:hover,
+      &:focus,
+      &:visited
+      {
+            background: #fff;
+            color: $color06;
+            border-color: $color06;
+            box-shadow: none;
+            outline: none;
+      }
+}
+
+.endCard{
+      .icon-timer{
+            font-size: 1.5em;
+      }
+     ul{
+           display: flex;
+           justify-content: flex-start;
+           align-items: center;
+           li{
+                 padding: .5em;
+                 .form-group{
+                       margin-bottom: 0;
+                 }
+
+           }
+     }
+     select{
+           border-color: transparent;
+           &:focus{
+            border-color: transparent;
+           }
+     }
+}
+.emails{
+      .icon-pencil-square-o{
+            font-size: 1.5em;
+            margin-left:auto;
+            align-self: end;
+            justify-self: flex-end;
+      }
+}
+.bodyCampagne {
+      .card:after{
+            border:none;
+      }
+}

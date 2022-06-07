@@ -1,0 +1,58 @@
+table.card-style{
+    border-spacing: 0 15px;
+    border-collapse: separate; 
+    thead {
+        tr{ border-spacing: 0 15px;}
+    }
+    td{
+        background-color: #ffffff;
+        line-height: 2.5;
+        border-top:1px solid #dee2e6;
+        border-bottom: 1px solid #dee2e6;
+    }
+    tbody{
+        border-spacing: 0 10px;
+            td:first-child {
+            border-left: 1px solid #dee2e6;
+            border-radius: 5px 0 0 5px;
+          }
+        }
+          td:last-child {
+            border-right: 1px solid #dee2e6;
+            border-radius: 0 5px 5px 0;
+          }
+          thead th{
+              border-bottom: none !important;
+              border-top: none !important;
+          }
+          thead th:first-child{
+              width: 40px;
+          }
+          .circle-name{
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            background-color: $themedColorUser;
+            width: 30px;
+            height: 30px;
+    }
+    .disabled td {
+        background-color: #dcdcdc!important;
+        border-color: #dcdcdc!important;
+        opacity: 0.65;
+    } 
+}
+.campaigns{}
+
+.status-colors{
+&.positive{
+    color: #61DE4D;
+}
+&.paused{
+    color: #BABAC2;
+}
+&.stopped{
+    color:#FF6584;
+}
+}

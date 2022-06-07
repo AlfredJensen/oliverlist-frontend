@@ -1,0 +1,113 @@
+.actions {
+    background-color: $color01;
+    padding-bottom: 1em;
+}
+
+.infoAdd {
+
+    .inf {
+        color: #000;
+        background-color: #fff;
+        border-radius: 5px;
+        line-height: 2;
+        text-align: center;
+        margin: 2px;
+        margin-top: 10px;
+        position: relative;
+        z-index: 2;
+        padding: 0 12px;
+        max-width: 14em;
+        display: block;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .infoAddTitle {
+        min-height: 1em;
+    }
+
+    .infoAddCard {
+        min-height: 5em;
+    }
+
+    /* .wrappCard{
+         max-width: 14em;
+    }*/
+    .qualifier {
+        border: 1px solid $color04;
+        color: $color04;
+    }
+
+    .reld {
+        border: 1px solid #943eea;
+        color: #943eea;
+    }
+
+    .rad {
+        border: 1px solid #613eea;
+        color: #613eea;
+    }
+
+    .nrp {
+        border: 1px solid #ffba9c;
+        color: #ffba9c;
+    }
+
+    .npc {
+        border: 1px solid #1f2041;
+        color: #1f2041;
+    }
+
+    .infoAddCard {
+        padding: 1em;
+        font-size: 1em;
+        min-width: 9em;
+        margin-top: 1em;
+        border: 1px solid #943eea;
+
+        .titCard {
+            color: #943eea;
+            display: block;
+            margin-bottom: .5em;
+            font-size: 1.3em;
+        }
+
+        .icon-more_horiz {
+            font-size: 2em;
+        }
+
+        .bottomCard {
+
+            ul {
+                li {
+                    display: inline-block;
+                    padding-right: .3em;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.all{
+    .search .form-control,
+    .search {
+        background-color: #ffffff;
+    }
+    .badgeQualifier{
+        background-color: $color07;
+    }
+    .icoCircle{
+        padding: 1.5em;
+    }
+    .table td,
+    .table th{
+        vertical-align: middle;
+        .icon-fire{
+            color:#FF4821;
+            font-size: 1.5em;
+        }
+    }
+}

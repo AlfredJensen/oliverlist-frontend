@@ -1,0 +1,21 @@
+{
+	"name":"Aivoni",
+	"short_name":"Aivoni",
+	"icons": [
+		{
+			"src": "/img/icons/Logo-oliver-400.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/img/icons/Logo-oliver-400.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "fullscreen",
+	"background_color": "#000000",
+	"theme_color": "#4DBA87",
+	"orientation": "portrait"
+}

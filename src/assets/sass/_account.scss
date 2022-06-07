@@ -1,0 +1,55 @@
+.account{
+    .card{
+        .title{
+            border-bottom: 1px solid $color05;
+            h3{margin-bottom: 0px;}
+            [class^="icon-"].lg, [class*=" icon-"].lg{
+                font-size: 1.75rem;
+            }
+        }
+    }
+    .container-circle{
+        width: 70px;
+        height: 70px;
+    }
+    .circle{
+        position: relative;
+        top: 5px;
+        left: 5px;
+        text-align: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background-color:$themedColorUser ;
+        > span{
+            position: relative;
+            top: 14px;
+            font-size: 1.3em;
+            color: #ffffff;
+        }
+    }
+    .container-circle-users{
+        width: 50px;
+        height: 50px;
+        .circle{
+            position: relative;
+            top: 5px;
+            left: 5px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color:$themedColorUser ;
+            > span{
+                position: relative;
+                top: 9px;
+                font-size: 1em;
+                color: #ffffff;
+            }
+        }
+    }
+    .section-pass{
+        border-top: 1px solid rgba(0,0,0,.125);
+        
+    }
+}

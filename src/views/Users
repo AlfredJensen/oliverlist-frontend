@@ -1,0 +1,59 @@
+<template>
+  <section class="users">
+    <Header :user="user" />
+    <main class="main"  :class="{ 'expand-main' : isMenuCollapse }" >
+      <component :is="businessesTabComponent" :selectedBusinessId="selectedBusinessId"></component>
+    </main>
+  </section>
+</template>
+
+<script>
+import { mapState, mapActions } from "vuex";
+import Header from "@/components/Header.vue";
+import AllBusinesses from "@/components/Businesses/AllBusinesses.vue";
+import SelectedBusiness from "@/components/Businesses/SelectedBusiness.vue";
+
+export default {
+  created() {
+    this.changeHeaderTab({ tab: "ALL" });
+    if (typeof this.$route.params.id !== "undefined") {
+      this.changeHeaderTab({ tab: "SELECTED" });
+    }
+  },
+
+  components: {
+    
+    AllBusinesses,
+    SelectedBusiness
+  },
+
+  computed: {
+    ...mapState({
+      headerTab: state => state.header.tab,
+      isMenuCollapse: state => state.sidebar.isNavOpen,
+    }),
+
+    user() {
+      return this.$store.state.authentication.user;
+    },
+
+    businessesTabComponent() {
+      if (this.headerTab === "ALL") {
+        return "AllBusinesses";
+      } else {
+        return "SelectedBusiness";
+      }
+    },
+
+    selectedBusinessId() {
+      return this.$route.params.id;
+    }
+  },
+
+  methods: {
+    ...mapActions("header", {
+      changeHeaderTab: "changeTab"
+    })
+  }
+};
+</script>

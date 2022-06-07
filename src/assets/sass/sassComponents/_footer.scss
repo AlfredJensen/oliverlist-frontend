@@ -1,0 +1,30 @@
+#footer-component{
+.footer-component{
+    position: relative;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 0px !important;
+    background-color: rgba(56, 62, 75, 0.5) !important;
+  
+}
+.wrapper-footer{
+    margin-left: 150px;
+    background-color: #383E4B !important;
+}
+.footer-links{
+    color: white;
+    }
+.content-links{
+     background-color: #383E4B !important;
+}
+.footer-links li{
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+.footer-links li a:hover{
+    color:#3887B1;
+}
+}

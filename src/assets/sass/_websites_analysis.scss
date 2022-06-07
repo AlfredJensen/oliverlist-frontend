@@ -1,0 +1,61 @@
+.websites-analysis {
+    .contentCenter {
+        padding-bottom: 0;
+    }
+    .table-fixed-container{
+        .header-fixed tr,
+        .row-fixed {
+            width: 100%;
+        }
+        .table-fixed thead {
+            width: 100%;
+        }
+        .table-fixed {
+            height: 700px;
+            overflow-y: auto;
+            width: 100%;
+            display: block;
+        }
+    }
+    .input-colors{
+        display: block;
+        border: white 1px solid;
+        width: 40px;
+        height: 40px;
+        margin: 7px 0px;
+    }
+
+    .website-logo {
+        height: 50px;
+        max-width: 200px;
+    }
+
+    .alternatives-logos {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 80px;
+        white-space:nowrap;
+    }
+
+    .website-analysis-column {
+        width: 500px;
+        position: relative;
+    }
+
+    td .spinner-container {
+        height: auto;
+        width: 500px;
+    }
+
+    input[type=checkbox] {
+        zoom: 1.5;
+    }
+
+    tr.selected{
+        background-color: rgba(0,0,0,.075);
+    }
+    tr.analyzed, tr.analyzed:hover{
+        background-color: rgba(1,160,31,.3);
+        border-bottom: 1px solid rgba(0,0,0,.3);
+    }
+}

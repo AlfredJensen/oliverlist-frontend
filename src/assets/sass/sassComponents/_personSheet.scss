@@ -1,0 +1,42 @@
+.person-sheet{
+    .card-top{
+        background: #443CEC;
+        border-color: #443CEC;
+        height: 100px;
+    }
+    .card.person{
+        min-height: 200px;
+    }
+    .wrapper-img-person{
+        width: 100px;
+        height: 50px;
+        position: relative;
+    }
+    .img-profile{
+        width: 100%;
+        position: absolute;
+        top:-75px;
+        border: 3px solid #F4F4F5;
+    
+    }
+    .card.person .card-body.pxmax-4{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .opportunities-linked ul li,.collegues ul li{
+        border-bottom: 1px solid rgba(0,0,0,.3);
+    }
+    .opportunities-linked ul li:last-child, .collegues ul li:last-child{
+        border-bottom: none;
+    }
+    .collegues-img{
+        width: 50px;
+        height: 50px;
+    }
+    .collegues-img img{
+        width: 100%;
+    }
+    .themed-button .icon-search{
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,309 @@
+.vue-image-crop-upload .vicp-wrap{
+    width: 100%;
+}
+.mailDetail{
+    margin-left: 33%;
+}
+
+@media screen and (max-width: 480px){
+    .wrapperNav{
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+    }
+    
+    .navbar-nav li.nav-item.dropup.mt-auto {
+        bottom: 44px !important;
+    }
+    
+    .contTable{
+    background-color: white;
+    }
+    
+    .expandedlist{
+        display: none;
+    }
+    
+    .mailDetail{
+        margin-left: unset;
+        margin-top: 3rem;
+    }
+    
+    .icoCircle{
+        display: none;
+    }
+    
+    .vert-text-btn {
+        display: block;
+        -webkit-transform: rotate(310deg);
+        transform: rotate(320deg);
+        border-width: 5px;
+        font-size: 0.5rem;
+        width: 142%;
+        position: relative;
+        top: 0px;
+        left: -8px;
+        line-height: 1;
+        margin-bottom: 14px;
+        font-weight: bolder;
+    }
+    
+    #btn-tokens{
+        height: 2rem;
+        margin-top: 8px;
+    }
+    
+    #btn-modif{
+        height: 3rem;
+    }
+    
+    .contentTracking{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn-toggleCollapse{
+       display: none;
+    }
+    
+    #footer-component .wrapper-footer {
+        margin-left: 10px !important;
+        background-color: #383E4B !important;
+    }
+    
+    #btn-tokens{
+        height: 2rem;
+        margin-top: 8px;
+    }
+    
+    .contCamps{
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    /* .main .card {
+      transition: 0.15s box-shadow, 0.15s transform;
+    }
+    .main .card:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 2.25rem 1.5rem -1.5rem rgba(33, 37, 41, 0.3), 0 0 1.5rem 0.5rem rgba(33, 37, 41, 0.05) !important;
+    } */
+    
+    .containersCampagner{
+        font-size: 0.6rem;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+
+    .containersCampagner > div > a > span{
+        word-wrap: break-word;
+        width: 100%;
+    }
+    
+    .view-dashboard .img-logo-oliver img {
+        width: 46% !important;
+    }
+
+    .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range .vicp-icon5, .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range .vicp-icon6 {
+        position: absolute;
+        top: -5px;
+        width: 76px;
+        height: 32px;
+        border-radius: 38%;
+        padding: 10px;
+        background-color: #17a2b885;
+    }
+    
+    .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range .vicp-icon5:hover, .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range .vicp-icon6:hover {
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        background-color: #17a2b8e3;
+    }
+    
+    .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range input[type=range] {
+        display: none;
+    }
+    
+    .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range {
+        position: relative;
+        margin: 24px 0 10px 24px;
+        width: 180px;
+        height: 50px;
+    }
+    
+    .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range .vicp-icon6::before {
+        position: absolute;
+        content: '';
+        display: block;
+        left: 26px;
+        top: 13px;
+        width: 24px;
+        height: 4px;
+        background-color: #fff;
+    }
+    
+    .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range .vicp-icon6::after {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 6px;
+        left: 36px;
+        width: 4px;
+        height: 18px;
+        background-color: #fff;
+    }
+    
+    .vue-image-crop-upload .vicp-wrap .vicp-step2 .vicp-crop .vicp-crop-left .vicp-range .vicp-icon5::before {
+        position: absolute;
+        content: '';
+        display: block;
+        left: 26px;
+        top: 13px;
+        width: 24px;
+        height: 4px;
+        background-color: #fff;
+    }
+    
+    .vue-image-crop-upload .vicp-wrap .vicp-operate {
+        position: absolute;
+        right: 32px;
+        bottom: 20px;
+        font-weight: bolder;
+    }
+
+    .progress-step.campaign-edit .progressbar li {
+        width: 100% !important;
+    }
+
+    .progress-step.campaign-edit .progressbar li span {
+        width: 100%;
+        margin: 2px 0;
+    }
+
+    .progress-step.campaign-edit .progressbar li::after {
+        display:none;
+    }
+        
+    .spinner-container .loading-spinner {
+        position: absolute;
+    }
+}
+
+.loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    color: #443CEC;
+}
+  
+.spinner-container {
+    height: calc(100vh - 300px);
+}
+
+.btnNavTabla{
+    font-size: 0.7rem;
+}
+
+.vicp-preview{
+    display: none;
+}
+
+.YourMessage{
+    width: 100%;
+}
+
+.filterOwner{
+    position: absolute;
+    font-size: 0.85rem !important;
+    left: -184px !important;
+    top: 34px;
+    max-width: 600px;
+}
+
+.iconNotification{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    right: 0px;
+    top: -10px;
+    font-size: 8px;
+}
+
+.collapseNav .iconNotification{
+    right: 8px;
+    top: -20px;
+}
+
+.hovertext{
+    span{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100px;
+        cursor:pointer;
+    }
+    &:hover {
+        position:relative;
+        span {
+            cursor:pointer;
+            overflow:auto;
+            max-width: 300px;
+            z-index:999;
+            white-space: break-spaces;
+            position: absolute;
+            background: white;
+            margin-top: 11px;
+            border: 1px solid #d8d8d8;
+            border-radius: 6px;
+            border-top: 1px solid #d8d8d8 !important;
+            margin-top: -15px;
+            padding:4px;
+            left:0;
+        }
+    }
+}
+
+.hovertext2{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.template-msg{
+    .card, .card:hover{
+     &.not-effect{
+       -webkit-transform: none !important;
+       transform: none !important;
+       transition: none !important;
+       box-shadow: none !important;
+     }
+   }
+   .bg-lg{
+        background-color: #f1f3f6; 
+   }
+   .token{
+        padding: 0px 5px;
+  
+        &.user{
+            background-color: #f7d57a;
+            color: #9f7d22;
+        }
+        &.prospect{
+            background-color: #9798f8; 
+        }
+    }
+ }
+
+ .minw-150{
+    min-width: 150px;
+  }
+  .msgCamp, .msgCamp span{
+    white-space: pre-line;
+  }
+
+ .not-ajust .wrapper , .vue-form-generator .not-ajust .field-wrap{
+   display: block !important;
+   width: 100% !important;
+ }
